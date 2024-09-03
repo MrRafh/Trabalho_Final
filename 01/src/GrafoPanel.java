@@ -11,7 +11,6 @@ class GrafoPanel extends JPanel {
         this.grafo = grafo;
         this.setPreferredSize(new Dimension(600, 600));
     }
-
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -19,7 +18,6 @@ class GrafoPanel extends JPanel {
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         desenharGrafo(g2d);
     }
-
     private void desenharGrafo(Graphics2D g) {
         Map<String, List<Aresta>> listaAdjacencias = grafo.getListaAdjacencias();
         int raioVertice = 20;
