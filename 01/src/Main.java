@@ -16,7 +16,6 @@ public class Main {
         outputArea = new JTextArea(15, 40);
         outputArea.setEditable(false);
     }
-
     public void iniciar() {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
@@ -31,7 +30,6 @@ public class Main {
         frame.pack();
         frame.setVisible(true);
     }
-
     private void adicionarBotoes(JPanel panel) {
         JButton btnAdicionarVertice = new JButton("Adicionar Vértice");
         btnAdicionarVertice.addActionListener(e -> adicionarVertice());
@@ -82,7 +80,6 @@ public class Main {
         panel.add(btnDijkstra);
         panel.add(btnPrimMST);
     }
-
     private void adicionarVertice() {
         String vertice = JOptionPane.showInputDialog(frame, "Digite o vértice:");
         if (vertice != null) {
@@ -90,7 +87,6 @@ public class Main {
             outputArea.append("Vértice " + vertice + " adicionado.\n");
         }
     }
-
     private void adicionarAresta() {
         String vertice1 = JOptionPane.showInputDialog(frame, "Digite o primeiro vértice:");
         String vertice2 = JOptionPane.showInputDialog(frame, "Digite o segundo vértice:");
@@ -101,7 +97,6 @@ public class Main {
             outputArea.append("Aresta adicionada entre " + vertice1 + " e " + vertice2 + " com peso " + peso + ".\n");
         }
     }
-
     private void removerVertice() {
         String vertice = JOptionPane.showInputDialog(frame, "Digite o vértice a ser removido:");
         if (vertice != null) {
@@ -109,7 +104,6 @@ public class Main {
             outputArea.append("Vértice " + vertice + " removido.\n");
         }
     }
-
     private void removerAresta() {
         String vertice1 = JOptionPane.showInputDialog(frame, "Digite o primeiro vértice:");
         String vertice2 = JOptionPane.showInputDialog(frame, "Digite o segundo vértice:");
@@ -119,7 +113,6 @@ public class Main {
             outputArea.append("Aresta removida entre " + vertice1 + " e " + vertice2 + ".\n");
         }
     }
-
     private void visualizarGrafo() {
         JFrame frameGrafo = new JFrame("Visualização do Grafo");
         frameGrafo.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -130,7 +123,6 @@ public class Main {
 
         frameGrafo.setVisible(true);
     }
-
     private void grauVertice() {
         String vertice = JOptionPane.showInputDialog(frame, "Digite o vértice:");
         if (vertice != null) {
@@ -159,7 +151,6 @@ public class Main {
             grafo.bfs(vertice);
         }
     }
-
     private void dfs() {
         String vertice = JOptionPane.showInputDialog(frame, "Digite o vértice inicial:");
         if (vertice != null) {
@@ -167,7 +158,6 @@ public class Main {
             grafo.dfs(vertice);
         }
     }
-
     private void dijkstra() {
         String vertice = JOptionPane.showInputDialog(frame, "Digite o vértice inicial:");
         if (vertice != null) {
@@ -178,7 +168,6 @@ public class Main {
             }
         }
     }
-
     private void primMST() {
         List<Aresta> mst = grafo.primMST();
         outputArea.append("Árvore Geradora Mínima (Prim):\n");
