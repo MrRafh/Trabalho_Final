@@ -1,8 +1,4 @@
-Aqui está um exemplo de um README detalhado para o seu projeto de gerenciamento de grafos em Java:
-
----
-
-# Gerenciador de Grafos em Java
+# Trabalho final
 
 ## Visão Geral do Projeto
 
