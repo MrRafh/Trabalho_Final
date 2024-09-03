@@ -6,11 +6,9 @@ class Grafo {
     public Grafo() {
         this.listaAdjacencias = new HashMap<>();
     }
-
     public void adicionarVertice(String vertice) {
         listaAdjacencias.putIfAbsent(vertice, new ArrayList<>());
     }
-
     public void adicionarAresta(String vertice1, String vertice2, int peso) {
         listaAdjacencias.putIfAbsent(vertice1, new ArrayList<>());
         listaAdjacencias.putIfAbsent(vertice2, new ArrayList<>());
@@ -29,7 +27,6 @@ class Grafo {
         if (eV1 != null) eV1.removeIf(aresta -> aresta.getDestino().equals(vertice2));
         if (eV2 != null) eV2.removeIf(aresta -> aresta.getDestino().equals(vertice1));
     }
-
     public void imprimirGrafo() {
         for (String vertice : listaAdjacencias.keySet()) {
             System.out.print(vertice + " -> ");
@@ -43,7 +40,6 @@ class Grafo {
     public int grauVertice(String vertice) {
         return listaAdjacencias.containsKey(vertice) ? listaAdjacencias.get(vertice).size() : 0;
     }
-
     public boolean ehConexo() {
         if (listaAdjacencias.isEmpty()) return true;
 
@@ -66,7 +62,6 @@ class Grafo {
         }
         return matriz;
     }
-
     public void bfs(String verticeInicial) {
         Set<String> visitados = new HashSet<>();
         Queue<String> fila = new LinkedList<>();
@@ -92,7 +87,6 @@ class Grafo {
         dfsRecursivo(verticeInicial, visitados);
         System.out.println();
     }
-
     private void dfsRecursivo(String vertice, Set<String> visitados) {
         visitados.add(vertice);
         System.out.print(vertice + " ");
@@ -159,7 +153,6 @@ class Grafo {
 
         return mst;
     }
-
     public Map<String, List<Aresta>> getListaAdjacencias() {
         return listaAdjacencias;
     }
