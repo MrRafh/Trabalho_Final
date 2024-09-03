@@ -35,7 +35,7 @@ Este projeto é um aplicativo de gerenciamento de grafos desenvolvido em Java, c
 ## Recursos Adicionais
 
 - [Documentação do Java Swing](https://docs.oracle.com/javase/7/docs/api/javax/swing/package-summary.html): Para aprender mais sobre a criação de interfaces gráficas com Swing.
-- [Estrutura de dados]([https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/](https://github.com/fgsantosti/estruturadedados/blob/main/Estrutura_de_Dados.ipynb)): Onde eu estudei sobre grafos.
+- [Estrutura de Dados](https://github.com/fgsantosti/estruturadedados/blob/c0728007aeaf999337e610e591a8b25ae25bfa61/Estrutura_de_Dados.ipynb): Onde estudei sobre grafos entre outras coisas.
 - [Estruturas de Dados e Algoritmos em Java](https://www.baeldung.com/java-algorithms): Artigos e tutoriais sobre algoritmos e estruturas de dados em Java.
 
 ## Contribuições
